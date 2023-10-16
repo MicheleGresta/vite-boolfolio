@@ -15,6 +15,7 @@ export default{
     <div class="row row-cols-3 my-5">
         <ProjectCard></ProjectCard>      
     </div>
+    
   </div>
 </template>
 <style lang="scss"></style>
