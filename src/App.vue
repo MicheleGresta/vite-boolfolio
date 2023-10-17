@@ -1,21 +1,37 @@
 <script>
 
-import ProjectCard from './components/ProjectCard.vue';
-export default{
 
-  components:{
-    ProjectCard
-},
+export default {
+
+
 }
 
 </script>
 <template>
-  <div class="container">
-    <h1 class="text-center py-3">Projects List</h1>
-    <div class="row row-cols-3 my-5">
-        <ProjectCard></ProjectCard>      
+  <header>
+    <div class="container">
+      <ul class="d-flex gap-3 list-unstyled">
+        <li><router-link :to="{ name: 'home' }">Home</router-link></li>
+        <li><router-link :to="{ name: 'projects' }">Projects</router-link></li>
+        <li><router-link :to="{ name: 'contacts' }">Contacts</router-link></li>
+        <li><router-link :to="{ name: 'about' }">About Me</router-link></li>
+      </ul>
     </div>
-    
-  </div>
+  </header>
+  <main>
+    <div class="container">
+      <h3>main</h3>
+      <div class="d-flex gap-3">
+
+
+        <router-view></router-view>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <h3>footer</h3>
+    </div>
+  </footer>
 </template>
 <style lang="scss"></style>
